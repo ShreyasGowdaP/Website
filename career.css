@@ -1,0 +1,243 @@
+/* CSS Reset */
+html, body, div, header, main, section, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: #232020;
+}
+
+html, body, input, fieldset, legend, label, select, option, textarea, button {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: #232020;
+    background-image: -webkit-linear-gradient(270deg, #f4f4f4, #f4f4f4 65%, #232020 65%);
+    background-image: -moz-linear-gradient(270deg, #f4f4f4, #f4f4f4 65%, #232020 65%);
+    background-image: linear-gradient(270deg, #f4f4f4, #f4f4f4 65%, #232020 65%);
+    font-size: 16px;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+h1 {
+    font-size: 65px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {    
+    line-height: 1.4em;
+    text-align: left;
+    color: transparent; /* hiding <p> text */
+}
+
+#description {
+    padding-left: 4px;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    line-height: 2.1em;
+}
+
+fieldset {
+    border: 0;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 0.8fr minmax(50vw, 2.2fr) 1.5fr 0.3fr;
+    grid-template-rows: minmax(50px, 80px) auto;
+    grid-template-areas: 
+        'empty empty empty empty'
+        'still-empty main-content-col title-col right-empty';
+    gap: 1.6em;
+    justify-items: stretch;
+    align-items: stretch;
+    margin-bottom: 30px;
+}
+
+#header {
+    grid-area: title-col;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#survey-form {
+    border-radius: 5px;
+    background-color: #ff7315;
+    color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 0px 15px 0px rgba(0, 0, 0, 0.8);
+    grid-area: main-content-col;    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        'row-heading row-heading'
+        'row-2-left row-2-right'
+        'row-3-left row-3-right'
+        'row-4-left row-4-right'
+        'row-textarea row-textarea'
+        'row-button row-button';
+    grid-gap: 1em;
+    justify-items: space-around;
+    align-content: start;
+}
+
+input[type='text'], input[type='email'], input[type='number'], select, textarea {
+    border-radius: 5px;        
+    font-size: 16px;
+    background-color: #f4f4f4;
+    color: #232020;
+    border: 0;
+    padding: 1.7%;
+    width: 96.2%;
+    box-shadow: inset 0 0 7px 0 rgba(17, 17, 17, 0.6);
+}
+
+input[type='radio'], input[type='checkbox'] {
+    min-width: 2em;
+    min-height: 2em;
+    vertical-align: top;
+}
+
+#textarea-comment-field-label {
+    grid-area: row-textarea;
+    resize: none;
+}
+
+select {
+    width: 99.6% !important;
+    align-self: end;
+}
+
+button { 
+    grid-area: row-button;   
+    background-color: #232020;
+    color: #f4f4f4;
+    font-size: 16px;
+    border: 0;
+    padding: 0.6em 0;
+    box-shadow: 0 5px 5px -2px rgba(17, 17, 17, 0.7);
+}
+
+#form-header {
+    grid-area: row-heading;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+@media (max-width: 1450px) {    
+
+    #main {
+        grid-template-columns: 0.8fr minmax(60vw, 2.2fr) 1.5fr 0.3fr;
+    }
+
+}
+
+@media (min-width: 991px) and (max-width: 1181px) {    
+
+    #main {
+        grid-template-columns: 0.5fr minmax(71vw, 2.5fr) 0.9fr 0.2fr;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 991px), (orientation: portrait) {
+
+    #main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(30px, 50px) repeat(2, auto);
+        grid-template-areas: 
+            'empty'
+            'title-col'
+            'main-content-col';
+        gap: 1.6em;
+        justify-items: stretch;
+        align-items: stretch;
+        margin-bottom: 30px;
+    } 
+
+    body {
+        background-image: none;
+    }
+    input[type='text'], input[type='email'], input[type='number'], select, textarea, button, body, legend, label {
+        font-size: 14.5px;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h1, h3, h4, h5, h6 {
+        text-align: center;
+        color: #f4f4f4;
+    }
+
+    #header {
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #survey-form {        
+        padding: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'row-heading'
+            'row-2-left'
+            'row-2-right'
+            'row-3-left'
+            'row-3-right'
+            'row-4-left'
+            'row-4-right'
+            'row-textarea'
+            'row-button';
+    }
+
+    fieldset {
+        margin-left: 0;
+        padding-left: 3px;
+    }
+
+    input[type='radio'], input[type='checkbox'] {
+        min-width: 1.8em;
+        min-height: 1.8em;
+        vertical-align: top;
+    }
+
+}

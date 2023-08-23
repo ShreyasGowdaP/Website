@@ -1,0 +1,87 @@
+<main id="main">
+
+    <header id="header">
+
+        <h1 id="title">GO PLASTIC FREE</h1>
+        <p id="description">Please fill the career survey form</p>
+
+    </header>
+
+        <form id="survey-form" action="">
+
+            <!-- Form Header -->
+            <h2 id="form-header">Career Survey Form</h2>
+
+            <label id="name-label" for="name">Name: <input id="name" type="text" placeholder="Full name" title="Enter your full name" required></label>
+
+            <label id="email-label" for="email">Email: <input id="email" type="email" placeholder="Email address" title="Enter your email address" required></label>
+
+            <label id="number-label" for="number">Age: <input id="number" type="number" placeholder="Age" title="Please specify your age" min="18" max="100"></label>
+
+            <label id="dropdown-label" for="dropdown">Type of waste: 
+                <select name="job-title" id="dropdown">
+                    <option disabled selected value>Please select your job title</option>
+                    <option value="Help Desk Technician">Plastic waste</option>
+                    <option value="IT Support Manager">E waste</option>
+                    <option value="Senior System Administrator">Hazardous waste</option>
+                    <option value="Systems Administrator">Chemical waste</option>
+                    <option value="Technical Support Engineer">Construction waste</option>
+                    <option value="IT Analyst">Biodegradable waste</option>
+                    <option value="Network Architect">Municipal solid waste</option>
+                    <option value="Network Systems Administrator">Agricultural waste</option>
+                    <option value="Senior Network Architect">Food waste</option>
+                    <option value="Senior Network Engineer">Industrial waste</option>
+                    <option value="Senior Network System Administrator">wet waste</option>
+                    <option value="Cloud Architect">Dry waste</option>
+                    <option value="Cloud Consultant">Green waste</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+
+            <!-- Radio buttons to select career level -->
+            <fieldset id="career-fieldset">
+
+                <legend id="career-legend">Please specify your current career level in sorting waste</legend>
+
+                <label id="entry-level-label" for="entry-level"><input type="radio" name="career-level" id="entry-level" value="entry-level" checked> Entry level</label>
+
+                <label id="mid-level-label" for="mid-level"><input type="radio" name="career-level" id="mid-level" value="mid-level"> Mid level</label>
+
+                <label id="senior-level-label" for="senior-level"><input type="radio" name="career-level" id="senior-level" value="senior-level"> Senior level</label>
+
+            </fieldset>
+
+            <!-- Checkboxes to select skills -->
+            <fieldset id="skills-field-set">
+
+                <legend id="skills-legend">Please select all the skills you have to join with us</legend>
+
+                <label id="it-support-checkbox-label" for="it-support-checkbox"><input type="checkbox" name="skills" id="it-support-checkbox" value="it-support-checkbox"> IT Support</label>
+
+                <label id="svr-ntwk-adm-checkbox-label" for="svr-ntwk-adm-checkbox"><input type="checkbox" name="skills" id="svr-ntwk-adm-checkbox" value="svr-ntwk-adm-checkbox"> Server/Network Administration</label>
+
+                <label id="app-dev-supp-checkbox-label" for="app-dev-supp-checkbox"><input type="checkbox" name="skills" id="app-dev-supp-checkbox" value="app-dev-supp-checkbox"> Application Development/Support</label>
+
+                <label id="web-dev-checkbox-label" for="web-dev-checkbox"><input type="checkbox" name="skills" id="web-dev-checkbox" value="web-dev-checkbox"> Web Development</label>
+
+                <label id="cloud-tech-checkbox-label" for="cloud-tech-checkbox"><input type="checkbox" name="skills" id="cloud-tech-checkbox" value="cloud-tech-checkbox"> Cloud Technologies</label>
+
+                <label id="it-sec-checkbox-label" for="it-sec-checkbox"><input type="checkbox" name="skills" id="it-sec-checkbox" value="it-sec-checkbox"> IT Security</label>
+
+                <label id="it-mgmt-checkbox-label" for="it-mgmt-checkbox"><input type="checkbox" name="skills" id="it-mgmt-checkbox" value="it-mgmt-checkbox"> IT Process Management</label>
+
+                <label id="other-checkbox-label" for="other-checkbox"><input type="checkbox" name="skills" id="other-checkbox" value="other-checkbox"> Not interested</label>
+
+            </fieldset>
+
+            <!-- Textarea for comments -->
+            <label id="textarea-comment-field-label" for="textarea-comment-field">Comments regarding our work: 
+                <textarea name="textarea-comment-field" id="textarea-comment-field" cols="30" rows="10" placeholder="Please enter any other information or comments here..."></textarea>
+            </label>
+
+            <!-- Submit user input -->
+            <button type="submit" id="submit">Submit</button>
+
+        </form>
+
+</main>
